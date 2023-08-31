@@ -34,7 +34,23 @@ describe('Coding challenge QA', () => {
     })
 
     it('Name comparison', async () => {
-    await InfoAdminPage.nameCheck();
+        await InfoAdminPage.nameCheck();
+    })
+
+    it('DOB modify and check', async () => {
+        await InfoAdminPage.inputDateOfBirth.click();
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await InfoAdminPage.saveBtn.click();
+        await browser.pause(6000);
+        await InfoAdminPage.inputDateOfBirth.waitForDisplayed();
+        await InfoAdminPage.inputDateOfBirth.setValue('1980-10-25');
+        await browser.pause(2000);
+        await InfoAdminPage.saveBtn.click();
+        await browser.pause(6000);
+        const dateOfBirth = await InfoAdminPage.inputDateOfBirth.getValue()
+        await browser.keys(dateOfBirth.toString())
+        console.log('Dates match!', await dateOfBirth);
     })
 })
 

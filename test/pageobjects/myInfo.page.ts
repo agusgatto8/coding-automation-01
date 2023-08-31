@@ -10,6 +10,19 @@ class InfoAdminPAge {
         return $('[name="lastName"]');
     }
 
+    public get inputDateOfBirth () {
+        return $('//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[3]/div[2]/div[1] // input [contains(@class, "oxd-input oxd-input--active")]');
+    }
+
+    public get saveBtn () {
+        return $('button[type="submit"]');
+    }
+
+    public get snackBar () {
+        return $('#oxd-toaster_1');
+    }
+
+
 
     public async nameCheck () {
         const firstName = await this.inputFirstName.getValue();
