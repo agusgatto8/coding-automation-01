@@ -50,7 +50,14 @@ describe('Coding challenge QA', () => {
         await browser.pause(6000);
         const dateOfBirth = await InfoAdminPage.inputDateOfBirth.getValue()
         await browser.keys(dateOfBirth.toString())
-        console.log('Dates match!', await dateOfBirth);
+        await expect(InfoAdminPage.inputDateOfBirth).toHaveValue(dateOfBirth);
+    })
+
+    it('Logout and check URL', async () => {
+        await Components.nameAdmin.click();
+        await Components.logoutBtn.waitForClickable();
+        await Components.logoutBtn.click();
+        await expect(browser).toHaveUrl('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
     })
 })
 

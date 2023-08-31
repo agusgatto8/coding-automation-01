@@ -18,19 +18,11 @@ class InfoAdminPAge {
         return $('button[type="submit"]');
     }
 
-    public get snackBar () {
-        return $('#oxd-toaster_1');
-    }
-
-
-
     public async nameCheck () {
         const firstName = await this.inputFirstName.getValue();
         const lastName = await this.inputLastName.getValue();
         const firstAndLastName = firstName + ' ' + lastName;
         const nameDashboard = await Components.nameAdmin.getText();
-        console.log(await nameDashboard);
-        console.log(await firstAndLastName);
         if(nameDashboard === firstAndLastName) {
             console.log('The names are identical!')
         } else {

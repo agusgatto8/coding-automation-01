@@ -12,6 +12,10 @@ class Components {
         return $('//*[@id="app"]/div[1]/div[1]/header // span [contains(@class, "oxd-userdropdown-tab")]');
     }
 
+    public get logoutBtn () {
+        return $('[href="/web/index.php/auth/logout"]');
+    }
+
     public get navBar () {
         return $('//*[@id="app"]  // nav [contains(@class, "oxd-navbar-nav")]');
     }
