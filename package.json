@@ -1,0 +1,23 @@
+{
+  "name": "coding-automation-01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/agusgatto8/coding-automation-01.git",
+  "author": "Agustin <agustin.gatto@radiumrocket.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@wdio/cli": "^8.15.10"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^4.3.5",
+    "@wdio/allure-reporter": "^8.15.10",
+    "@wdio/jasmine-framework": "^8.15.10",
+    "@wdio/local-runner": "^8.15.10",
+    "@wdio/spec-reporter": "^8.15.10",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.ts"
+  }
+}
