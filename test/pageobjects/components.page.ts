@@ -5,7 +5,7 @@ class Components {
     }
 
     public get nameSection () {
-        return $('//*[@id="app"]/div[1]/div[1]/header/div[1] // h6 [contains(., "Dashboard")]');
+        return $('//*[@id="app"]/div[1]/div[1]/header // div [contains(@class, "oxd-topbar-header-title")]');
     }
 
     public get nameAdmin () {
@@ -21,7 +21,7 @@ class Components {
     }
 
     public get myInfoBtn () {
-        return $('//*[@id="app"]/div[1]/div[1]/aside/nav // li [contains(@class, "oxd-main-menu-item-wrapper")] [8]');
+        return $('//*[@id="app"]/div[1]/div[1]/aside/nav // li [contains(@class, "oxd-main-menu-item-wrapper")] [6]');
     }
 }
 
